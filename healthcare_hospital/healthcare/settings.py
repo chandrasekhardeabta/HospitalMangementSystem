@@ -1,10 +1,14 @@
+import os
 from pathlib import Path
+
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "change-this-secret-key-before-production"
-DEBUG = True
+SECRET_KEY = os.environ.get("SECRET_KEY", "change-this-secret-key-before-production")
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ["https://*.onrender.com"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -19,6 +23,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "healthcare.cors_middleware.HealthcareCORSMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -49,10 +54,10 @@ WSGI_APPLICATION = "healthcare.wsgi.application"
 ASGI_APPLICATION = "healthcare.asgi.application"
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    "default": dj_database_url.config(
+        default="sqlite:///" + str(BASE_DIR / "db.sqlite3"),
+        conn_max_age=600,
+    )
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -71,6 +76,11 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {"BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"},
+}
+
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
@@ -79,6 +89,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_URL = "/patient/login/"
 LOGIN_REDIRECT_URL = "/patient/dashboard/"
 LOGOUT_REDIRECT_URL = "/"
+
+# Render sits behind a proxy that handles HTTPS
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # ==============================================================================
 # Healthcare & HIPAA / DISHA Security Hardening
