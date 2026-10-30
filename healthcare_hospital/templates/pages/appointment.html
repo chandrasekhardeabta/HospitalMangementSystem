@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Book Appointment | HealthCare Hospital{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="container"><span class="eyebrow">Appointment</span><h1>Book a Doctor Appointment</h1><p>Select department, doctor, date and time.</p></div></section>
+<section class="container py-5">
+    <div class="form-card">
+        <div class="stepper mb-4"><span class="active">1 Department</span><span>2 Doctor</span><span>3 Date & Time</span><span>4 Confirm</span></div>
+        <form method="post">{% csrf_token %}
+            {% for field in form %}
+            <div class="mb-3"><label class="form-label">{{ field.label }}</label>{{ field }}{% if field.errors %}<div class="text-danger small mt-1">{{ field.errors|striptags }}</div>{% endif %}</div>
+            {% endfor %}
+            <div class="alert alert-info small"><i class="bi bi-info-circle me-2"></i>Payment gateway integration can be connected after appointment confirmation.</div>
+            <button class="btn btn-primary btn-lg">Confirm Appointment <i class="bi bi-arrow-right ms-2"></i></button>
+        </form>
+    </div>
+</section>
+{% endblock %}

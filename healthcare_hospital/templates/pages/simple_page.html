@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} | HealthCare Hospital{% endblock %}
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <span class="eyebrow">HealthCare Hospital</span>
+        <h1>{{ title }}</h1>
+        <p>Professional healthcare, connected services and patient-first support.</p>
+    </div>
+</section>
+<section class="container py-5">
+    {% if page_key == "emergency" %}
+    <div class="emergency-banner">
+        <div><i class="bi bi-truck-front-fill"></i></div>
+        <div><h2>24/7 Emergency</h2><p>For urgent medical assistance, call our emergency team immediately.</p><a href="tel:+919876543210" class="btn btn-danger">CALL EMERGENCY</a></div>
+    </div>
+    {% else %}
+    <div class="content-card">
+        <h2>{{ title }}</h2>
+        <p class="lead">This page is intentionally structured as a clean extension point for your hospital management modules.</p>
+        <div class="row g-4 mt-2">
+            <div class="col-md-4"><div class="feature-box"><i class="bi bi-heart-pulse"></i><h5>Patient First</h5><p>Simple workflows for appointments, records, reports and support.</p></div></div>
+            <div class="col-md-4"><div class="feature-box"><i class="bi bi-shield-check"></i><h5>Reliable Care</h5><p>Role-based modules can be expanded through Django authentication and permissions.</p></div></div>
+            <div class="col-md-4"><div class="feature-box"><i class="bi bi-cpu"></i><h5>Digital Hospital</h5><p>Designed to grow into patient, doctor, employee and admin portals.</p></div></div>
+        </div>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

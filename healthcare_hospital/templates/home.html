@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}HealthCare Hospital | Your Health, Our Priority{% endblock %}
+
+{% block content %}
+<main>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center min-vh-hero">
+                <div class="col-lg-6 py-5">
+                    <span class="eyebrow"><i class="bi bi-stars"></i> Welcome to HealthCare Hospital</span>
+                    <h1>Your Health,<br><span>Our Priority</span></h1>
+                    <p class="hero-copy">We provide world class medical services with compassion and care.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="{% url 'appointments' %}" class="btn btn-primary btn-lg px-4"><i class="bi bi-calendar2-check me-2"></i>Book Appointment</a>
+                        <a href="{% url 'doctors' %}" class="btn btn-outline-primary btn-lg px-4"><i class="bi bi-person-badge me-2"></i>Find a Doctor</a>
+                        <a href="{% url 'patient_login' %}" class="btn btn-soft btn-lg px-4"><i class="bi bi-person-fill me-2"></i>Patient Login</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-visual">
+                    <div class="doctor-photo-wrap">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=85" alt="Doctor at HealthCare Hospital">
+                    </div>
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bi bi-truck-front-fill"></i></div>
+                        <div><strong>24/7 Emergency Care</strong><span>Always here for your emergency</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-section">
+        <div class="container">
+            <div class="quick-grid">
+                <a class="quick-card" href="{% url 'appointments' %}"><span class="quick-icon"><i class="bi bi-calendar2-week"></i></span><span><strong>Book Appointment</strong><small>Schedule your visit</small></span></a>
+                <a class="quick-card" href="{% url 'doctors' %}"><span class="quick-icon"><i class="bi bi-person"></i></span><span><strong>Find Doctors</strong><small>Search our specialists</small></span></a>
+                <a class="quick-card" href="{% url 'patient_dashboard' %}"><span class="quick-icon"><i class="bi bi-folder2-open"></i></span><span><strong>Patient Dashboard</strong><small>Access your records</small></span></a>
+                <a class="quick-card" href="{% url 'billing' %}"><span class="quick-icon"><i class="bi bi-credit-card"></i></span><span><strong>Pay Fees</strong><small>Secure online payment</small></span></a>
+                <a class="quick-card" href="{% url 'patient_dashboard' %}"><span class="quick-icon"><i class="bi bi-file-earmark-text"></i></span><span><strong>View Reports</strong><small>Check your reports</small></span></a>
+                <a class="quick-card" href="{% url 'emergency' %}"><span class="quick-icon"><i class="bi bi-headset"></i></span><span><strong>Support</strong><small>Get help & support</small></span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-3">
+                <div class="info-panel patient-panel">
+                    <div class="panel-icon"><i class="bi bi-person-badge-fill"></i></div>
+                    <div><h5>For Patients</h5>
+                    <ul><li>Book Appointments</li><li>View Medical History</li><li>Reports & Prescriptions</li><li>Online Payments</li><li>Support</li></ul>
+                    <a href="{% url 'patient_login' %}" class="panel-btn green">Patient Login</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="info-panel doctor-panel">
+                    <div class="panel-icon"><i class="bi bi-person-vcard-fill"></i></div>
+                    <div><h5>For Doctors</h5>
+                    <ul><li>Manage Appointments</li><li>Patient Treatment</li><li>E-Prescriptions</li><li>Reports & Analytics</li><li>Profile Management</li></ul>
+                    <a href="{% url 'doctor_login' %}" class="panel-btn blue">Doctor Login</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="info-panel careers-panel">
+                    <div class="panel-icon"><i class="bi bi-briefcase-fill"></i></div>
+                    <div><h5>Careers</h5>
+                    <ul><li>Join Our Team</li><li>Doctor Recruitment</li><li>Nursing Jobs</li><li>Department Jobs</li><li>Apply Now</li></ul>
+                    <a href="{% url 'careers' %}" class="panel-btn purple">Apply Now</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="info-panel contact-panel">
+                    <div class="panel-icon"><i class="bi bi-headset"></i></div>
+                    <div><h5>Contact Us</h5>
+                    <p><i class="bi bi-telephone-fill"></i> +91 12345 67890</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@healthcare.com</p>
+                    <p><i class="bi bi-geo-alt-fill"></i> 123, Health Street,<br>Medical City, India</p>
+                    <div class="socials"><span>f</span><span>𝕏</span><span>in</span><span>◎</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pb-5">
+        <div class="stats-grid">
+            <div class="stat-card"><span><i class="bi bi-person-heart"></i></span><strong>{{ doctor_count }}+</strong><small>Doctors</small></div>
+            <div class="stat-card"><span><i class="bi bi-hospital"></i></span><strong>{{ department_count }}+</strong><small>Departments</small></div>
+            <div class="stat-card"><span><i class="bi bi-people"></i></span><strong>{{ patient_count|default:"15K" }}+</strong><small>Patients</small></div>
+            <div class="stat-card"><span><i class="bi bi-calendar2-check"></i></span><strong>{{ appointment_count|default:"5K" }}+</strong><small>Appointments</small></div>
+            <div class="stat-card"><span><i class="bi bi-globe2"></i></span><strong>24/7</strong><small>Emergency</small></div>
+            <div class="stat-card"><span><i class="bi bi-heart-pulse"></i></span><strong>100%</strong><small>Care & Support</small></div>
+        </div>
+    </section>
+
+    <section class="section-soft py-5">
+        <div class="container">
+            <div class="section-heading">
+                <span>Care beyond treatment</span>
+                <h2>Healthcare services designed around you</h2>
+                <p>From first consultation to follow-up, keep your hospital journey simple and connected.</p>
+            </div>
+            <div class="row g-4 mt-2">
+                {% for department in departments %}
+                <div class="col-sm-6 col-lg-3">
+                    <a href="{% url 'departments' %}" class="service-card">
+                        <i class="bi {{ department.icon }}"></i>
+                        <h5>{{ department.name }}</h5>
+                        <p>{{ department.description|default:"Expert care from our multidisciplinary medical team."|truncatechars:90 }}</p>
+                        <span>Explore <i class="bi bi-arrow-right"></i></span>
+                    </a>
+                </div>
+                {% empty %}
+                <div class="col-12">
+                    <div class="empty-state">Add departments from Django Admin to populate this section.</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

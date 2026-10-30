@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block title %}Patient Registration | HealthCare Hospital{% endblock %}
+{% block content %}
+<section class="auth-page"><div class="container"><div class="auth-card"><div class="auth-heading"><span class="auth-icon"><i class="bi bi-person-plus-fill"></i></span><h1>Patient Registration</h1><p>Create your secure patient portal account.</p></div><form method="post">{% csrf_token %}{% for field in form %}<div class="mb-3"><label class="form-label">{{ field.label }}</label>{{ field }}{% if field.errors %}<div class="text-danger small">{{ field.errors|striptags }}</div>{% endif %}</div>{% endfor %}<button class="btn btn-primary w-100 btn-lg">Create Patient Account</button></form><p class="text-center mt-3 mb-0">Already registered? <a href="{% url 'patient_login' %}">Patient Login</a></p></div></div></section>
+{% endblock %}

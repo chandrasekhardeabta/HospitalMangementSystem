@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthCare - Hospital Portal | Your Health, Our Priority</title>
+  <meta name="description" content="HealthCare Hospital Portal - We provide world class medical services with compassion and care. Book appointments, find doctors, access patient dashboard and 24/7 emergency care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar" aria-label="Quick contact and emergency information">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <a href="tel:+911234567890" class="top-item" title="Call Us">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>+91 12345 67890</span>
+        </a>
+
+        <a href="mailto:info@healthcare.com" class="top-item" title="Email Us">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>info@healthcare.com</span>
+        </a>
+
+        <div class="top-item address-item" title="Hospital Location">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>123, Health Street, Medical City, India</span>
+        </div>
+      </div>
+
+      <div class="top-bar-right">
+        <div class="emergency-wrapper">
+          <span class="emergency-label">Emergency:</span>
+          <a href="tel:+919876543210" class="emergency-number">+91 98765 43210</a>
+        </div>
+
+        <a href="login.html" class="login-reg-btn" id="topLoginBtn">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon-box">
+          <svg viewBox="0 0 36 36" fill="none" class="brand-svg">
+            <rect width="36" height="36" rx="8" fill="#1d68bd"/>
+            <path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/>
+            <path d="M12 18h3l2-4 3 8 2-4h3" stroke="#1d68bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">HealthCare</span>
+          <span class="brand-subtitle">Hospital Portal</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Home<span class="active-indicator"></span></a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="services.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Services</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="services.html#emergency">Emergency Care</a></li>
+              <li><a href="services.html#opd">OPD Services</a></li>
+              <li><a href="services.html#diagnostics">Diagnostic Tests</a></li>
+              <li><a href="services.html#pharmacy">Pharmacy</a></li>
+              <li><a href="services.html#ambulance">Ambulance Service</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="departments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Departments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="departments.html">All Departments</a></li>
+              <li><a href="departments.html#cardiology">Cardiology</a></li>
+              <li><a href="departments.html#neurology">Neurology</a></li>
+              <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+              <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+              <li><a href="departments.html#general">General Medicine</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="patients.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Patients</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="patients.html">Patient Directory</a></li>
+              <li><a href="treatment.html">Treatment Protocols (#EHR)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="appointments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Appointments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="appointments.html">Appointment List</a></li>
+              <li><a href="book-appointment.html">Book Appointment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="billing.html" class="nav-link">Billing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link">Reports</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="careers.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Careers</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="careers.html">Current Openings</a></li>
+              <li><a href="doctor-application.html">Doctor Application Form</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <!-- Watermark Medical Cross in top right background -->
+      <div class="watermark-cross" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M38 10h24v28h28v24h-28v28h-24v-28h-28v-24h28v-28z"/>
+        </svg>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Hero Text Left -->
+        <div class="hero-content">
+          <div class="welcome-pill">
+            <span>Welcome to HealthCare Hospital</span>
+          </div>
+
+          <h1 class="hero-title">
+            Your Health,<br>
+            <span class="highlight-blue">Our Priority</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            We provide world class medical services with compassion and care.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary open-booking-modal" id="heroBookBtn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span>Book Appointment</span>
+            </button>
+
+            <button type="button" class="btn btn-secondary open-patient-login" id="heroPatientBtn">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span>Patient Login</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Doctor Visual Right -->
+        <div class="hero-visual">
+          <div class="image-wrapper">
+            <img src="./assets/doctors_hero.jpg" alt="HealthCare Hospital Doctors and Medical Staff" class="doctors-photo" loading="eager">
+            
+            <!-- Floating Emergency Badge Overlay -->
+            <div class="floating-emergency-card" role="region" aria-label="Emergency Care Service">
+              <div class="emergency-icon-bubble">
+                <!-- Ambulance / Emergency SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="15" height="13"/>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                  <line x1="8.5" y1="7.5" x2="8.5" y2="11.5"/>
+                  <line x1="6.5" y1="9.5" x2="10.5" y2="9.5"/>
+                </svg>
+              </div>
+              <div class="emergency-text-content">
+                <div class="emergency-title">24/7 Emergency Care</div>
+                <div class="emergency-desc">Always here for your emergency</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Action / Services 6-Cards Bar -->
+    <section class="quick-services-section" aria-label="Quick Access Services">
+      <div class="container">
+        <div class="services-grid">
+          <!-- Card 1: Book Appointment -->
+          <button type="button" class="quick-card open-booking-modal" aria-label="Book Appointment - Schedule your visit">
+            <div class="card-icon-box blue-square">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <circle cx="8" cy="14" r="1" fill="currentColor"/>
+                <circle cx="12" cy="14" r="1" fill="currentColor"/>
+                <circle cx="16" cy="14" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Book Appointment</h3>
+              <p class="card-subtitle">Schedule your visit</p>
+            </div>
+          </button>
+
+          <!-- Card 2: Find Doctors -->
+          <button type="button" class="quick-card open-doctors-modal" aria-label="Find Doctors - Search our specialists">
+            <div class="card-icon-box blue-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Find Doctors</h3>
+              <p class="card-subtitle">Search our specialists</p>
+            </div>
+          </button>
+
+          <!-- Card 3: Patient Dashboard -->
+          <button type="button" class="quick-card open-patient-login" aria-label="Patient Dashboard - Access your records">
+            <div class="card-icon-box blue-folder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                <line x1="12" y1="11" x2="12" y2="17"/>
+                <line x1="9" y1="14" x2="15" y2="14"/>
+              </svg>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Patient Dashboard</h3>
+              <p class="card-subtitle">Access your records</p>
+            </div>
+          </button>
+
+          <!-- Card 4: Pay Fees -->
+          <button type="button" class="quick-card open-pay-modal" aria-label="Pay Fees - Secure online payment">
+            <div class="card-icon-box blue-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Pay Fees</h3>
+              <p class="card-subtitle">Secure online payment</p>
+            </div>
+          </button>
+
+          <!-- Card 5: View Reports -->
+          <button type="button" class="quick-card open-reports-modal" aria-label="View Reports - Check your reports">
+            <div class="card-icon-box blue-doc">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">View Reports</h3>
+              <p class="card-subtitle">Check your reports</p>
+            </div>
+          </button>
+
+          <!-- Card 6: Support -->
+          <button type="button" class="quick-card open-support-modal" aria-label="Support - Get help & support">
+            <div class="card-icon-box blue-headset">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+              </svg>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Support</h3>
+              <p class="card-subtitle">Get help & support</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Colored Portal Cards Section -->
+    <section class="portals-section" aria-label="Healthcare Portals and Contact Information">
+      <div class="container">
+        <div class="portals-grid">
+          
+          <!-- Card 1: For Patients (Mint Green) -->
+          <article class="portal-card patient-theme">
+            <div class="portal-header">
+              <div class="portal-icon-wrapper green-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <h2 class="portal-heading">For Patients</h2>
+            </div>
+            <ul class="portal-checklist">
+              <li>Book Appointments</li>
+              <li>View Medical History</li>
+              <li>Reports &amp; Prescriptions</li>
+              <li>Online Payments</li>
+              <li>Support</li>
+            </ul>
+            <button type="button" class="portal-btn btn-green open-patient-login">
+              Patient Login
+            </button>
+          </article>
+
+          <!-- Card 2: For Doctors (Ice Blue) -->
+          <article class="portal-card doctor-theme">
+            <div class="portal-header">
+              <div class="portal-icon-wrapper blue-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M16 11h6"/>
+                  <path d="M19 8v6"/>
+                </svg>
+              </div>
+              <h2 class="portal-heading">For Doctors</h2>
+            </div>
+            <ul class="portal-checklist">
+              <li>Manage Appointments</li>
+              <li>Patient Treatment</li>
+              <li>E-Prescriptions</li>
+              <li>Reports &amp; Analytics</li>
+              <li>Profile Management</li>
+            </ul>
+            <button type="button" class="portal-btn btn-blue open-doctor-login">
+              Doctor Login
+            </button>
+          </article>
+
+          <!-- Card 3: Careers (Lavender Purple) -->
+          <article class="portal-card career-theme">
+            <div class="portal-header">
+              <div class="portal-icon-wrapper purple-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                  <line x1="12" y1="12" x2="12" y2="16"/>
+                  <line x1="10" y1="14" x2="14" y2="14"/>
+                </svg>
+              </div>
+              <h2 class="portal-heading">Careers</h2>
+            </div>
+            <ul class="portal-checklist">
+              <li>Join Our Team</li>
+              <li>Doctor Recruitment</li>
+              <li>Nursing Jobs</li>
+              <li>Department Jobs</li>
+              <li>Apply Now</li>
+            </ul>
+            <button type="button" class="portal-btn btn-purple open-career-modal">
+              Apply Now
+            </button>
+          </article>
+
+          <!-- Card 4: Contact Us (Soft Amber / Cream) -->
+          <article class="portal-card contact-theme">
+            <div class="portal-header">
+              <div class="portal-icon-wrapper amber-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                  <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                </svg>
+              </div>
+              <h2 class="portal-heading">Contact Us</h2>
+            </div>
+            
+            <div class="contact-details">
+              <a href="tel:+911234567890" class="contact-line">
+                <svg class="contact-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span>+91 12345 67890</span>
+              </a>
+
+              <a href="mailto:info@healthcare.com" class="contact-line">
+                <svg class="contact-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span>info@healthcare.com</span>
+              </a>
+
+              <div class="contact-line">
+                <svg class="contact-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span>123, Health Street,<br>Medical City, India</span>
+              </div>
+            </div>
+
+            <div class="social-links-row" aria-label="Social Media Profiles">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-circle fb" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </a>
+
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-circle tw" title="Twitter / X">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                </svg>
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle in" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle ig" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Statistics Bar (6 Key Metrics) -->
+    <section class="stats-section" aria-label="Hospital Statistics and Milestones">
+      <div class="container">
+        <div class="stats-card-container">
+          <!-- Stat 1: 50+ Doctors -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper green-stat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number" data-target="50" data-suffix="+">50+</div>
+              <div class="stat-label">Doctors</div>
+            </div>
+          </div>
+
+          <!-- Stat 2: 20+ Departments -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper blue-stat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                <line x1="9" y1="22" x2="9" y2="2"/>
+                <line x1="8" y1="6" x2="6" y2="6"/>
+                <line x1="16" y1="6" x2="14" y2="6"/>
+                <line x1="8" y1="10" x2="6" y2="10"/>
+                <line x1="16" y1="10" x2="14" y2="10"/>
+                <line x1="8" y1="14" x2="6" y2="14"/>
+                <line x1="16" y1="14" x2="14" y2="14"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number" data-target="20" data-suffix="+">20+</div>
+              <div class="stat-label">Departments</div>
+            </div>
+          </div>
+
+          <!-- Stat 3: 15K+ Patients -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper teal-stat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number" data-target="15" data-suffix="K+">15K+</div>
+              <div class="stat-label">Patients</div>
+            </div>
+          </div>
+
+          <!-- Stat 4: 5K+ Appointments -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper sky-stat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <path d="m9 16 2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number" data-target="5" data-suffix="K+">5K+</div>
+              <div class="stat-label">Appointments</div>
+            </div>
+          </div>
+
+          <!-- Stat 5: 24/7 Emergency -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper purple-stat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Emergency</div>
+            </div>
+          </div>
+
+          <!-- Stat 6: 100% Care & Support -->
+          <div class="stat-item">
+            <div class="stat-icon-wrapper violet-stat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+              <div class="stat-label">Care &amp; Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="logo-icon-box">
+              <svg viewBox="0 0 36 36" fill="none" class="brand-svg">
+                <rect width="36" height="36" rx="8" fill="#1d68bd"/>
+                <path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/>
+                <path d="M12 18h3l2-4 3 8 2-4h3" stroke="#1d68bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: #ffffff;">HealthCare</span>
+              <span class="brand-subtitle" style="color: #94a3b8;">Hospital Portal</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            HealthCare Hospital is a multi-speciality tertiary care center committed to delivering world-class medical treatments with compassion, advanced technology, and patient-centered ethics.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home Portal</a></li>
+            <li><a href="about.html">About HealthCare</a></li>
+            <li><a href="services.html">Medical Services</a></li>
+            <li><a href="departments.html">Specialist Departments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="contact.html">Contact Helpdesk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Hospital Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="patients.html">Patient Directory</a></li>
+            <li><a href="appointments.html">Appointments Schedule</a></li>
+            <li><a href="book-appointment.html">Book Online Consultation</a></li>
+            <li><a href="billing.html">Invoices & Billing</a></li>
+            <li><a href="treatment.html">Treatment Protocols</a></li>
+            <li><a href="reports.html">Analytics & Reports</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Emergency & Care</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px; color: #cbd5e1;">
+            <strong>Emergency Hotline:</strong><br>
+            <span style="color: #f87171; font-weight: 700; font-size: 1rem;">+91 98765 43210</span><br>
+            <span>Available 24 Hours / 7 Days</span>
+          </p>
+          <p style="font-size: 0.8125rem; color: #94a3b8;">
+            123, Health Street, Medical City, India<br>
+            Email: info@healthcare.com
+          </p>
+          <div style="margin-top: 14px;">
+            <a href="doctor-application.html" class="btn btn-sm btn-secondary" style="border-radius: 6px;">Careers for Doctors</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 HealthCare Hospital Portal. All rights reserved.</div>
+        <div style="display: flex; gap: 18px;">
+          <a href="privacy.html" style="color: #94a3b8;">Privacy Policy</a>
+          <a href="terms.html" style="color: #94a3b8;">Terms of Service</a>
+          <a href="404.html" style="color: #94a3b8;">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Modals for Full Working Functionality -->
+
+  <!-- 1. Appointment Booking Modal -->
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true" role="dialog" aria-labelledby="bookingModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="bookingModalTitle" class="modal-title">Book an Appointment</h3>
+        <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="bookingForm" class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="patientFullName">Patient Full Name *</label>
+            <input type="text" id="patientFullName" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div class="form-group">
+            <label for="patientPhone">Contact Phone *</label>
+            <input type="tel" id="patientPhone" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="selectDepartment">Department *</label>
+            <select id="selectDepartment" required>
+              <option value="">Select Medical Department</option>
+              <option value="cardiology">Cardiology</option>
+              <option value="neurology">Neurology</option>
+              <option value="orthopedics">Orthopedics</option>
+              <option value="pediatrics">Pediatrics</option>
+              <option value="general">General Medicine</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="appointmentDate">Preferred Date *</label>
+            <input type="date" id="appointmentDate" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="doctorSelect">Preferred Specialist (Optional)</label>
+          <select id="doctorSelect">
+            <option value="">Any Available Specialist</option>
+            <option value="dr-sharma">Dr. Rajesh Sharma (Chief Cardiologist)</option>
+            <option value="dr-priya">Dr. Priya Verma (Neurologist)</option>
+            <option value="dr-arun">Dr. Arun Mehta (Orthopedic Surgeon)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="problemDescription">Symptoms / Reason for Visit</label>
+          <textarea id="problemDescription" rows="3" placeholder="Briefly describe your symptoms..."></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm Appointment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Patient / Doctor Login Modal -->
+  <div class="modal-backdrop" id="loginModal" aria-hidden="true" role="dialog" aria-labelledby="loginModalTitle">
+    <div class="modal-dialog login-dialog">
+      <div class="modal-header">
+        <h3 id="loginModalTitle" class="modal-title">Portal Access Login</h3>
+        <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="login-tabs">
+        <button type="button" class="tab-btn active" id="tabPatient">Patient Portal</button>
+        <button type="button" class="tab-btn" id="tabDoctor">Doctor / Staff</button>
+      </div>
+      <form id="loginForm" class="modal-form">
+        <div class="form-group">
+          <label id="loginIdLabel" for="loginId">Patient ID / Mobile Number</label>
+          <input type="text" id="loginId" placeholder="Enter your registered ID or mobile" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password / OTP</label>
+          <input type="password" id="loginPassword" placeholder="Enter secure password" required>
+        </div>
+        <div class="form-options">
+          <label class="checkbox-label">
+            <input type="checkbox" checked> Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-primary btn-block" id="loginSubmitBtn">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. Career Application Modal -->
+  <div class="modal-backdrop" id="careerModal" aria-hidden="true" role="dialog" aria-labelledby="careerModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="careerModalTitle" class="modal-title">Join Our Healthcare Team</h3>
+        <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="careerForm" class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="applicantName">Full Name *</label>
+            <input type="text" id="applicantName" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="applicantEmail">Email Address *</label>
+            <input type="email" id="applicantEmail" placeholder="yourname@domain.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="jobRole">Position Applied For *</label>
+            <select id="jobRole" required>
+              <option value="">Select Desired Position</option>
+              <option value="resident-doctor">Resident Physician</option>
+              <option value="nurse">Registered Staff Nurse (ICU/Ward)</option>
+              <option value="technician">Radiology / Lab Technician</option>
+              <option value="admin">Medical Administrator / Front Desk</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="applicantExp">Years of Experience *</label>
+            <input type="number" id="applicantExp" min="0" max="40" placeholder="e.g. 3" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="resumeUpload">Upload Resume / CV (PDF/DOC) *</label>
+          <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx" required>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-purple">Submit Application</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="api-client.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

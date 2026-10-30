@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatment Details - HealthCare Hospital Portal</title>
+  <meta name="description" content="Clinical patient treatment protocol, doctor's diagnosis, medical prescription summary, and discharge care notes at HealthCare Hospital.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar" aria-label="Contact and emergency information">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <a href="tel:+911234567890" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 12345 67890</span>
+        </a>
+        <a href="mailto:info@healthcare.com" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@healthcare.com</span>
+        </a>
+        <div class="top-item address-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>123, Health Street, Medical City, India</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="emergency-wrapper">
+          <span class="emergency-label">Emergency:</span>
+          <a href="tel:+919876543210" class="emergency-number">+91 98765 43210</a>
+        </div>
+        <a href="login.html" class="login-reg-btn">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon-box">
+          <svg viewBox="0 0 36 36" fill="none" class="brand-svg">
+            <rect width="36" height="36" rx="8" fill="#1d68bd"/>
+            <path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/>
+            <path d="M12 18h3l2-4 3 8 2-4h3" stroke="#1d68bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">HealthCare</span>
+          <span class="brand-subtitle">Hospital Portal</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="services.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Services</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="services.html#emergency">Emergency Care</a></li>
+              <li><a href="services.html#opd">OPD Services</a></li>
+              <li><a href="services.html#diagnostics">Diagnostic Tests</a></li>
+              <li><a href="services.html#pharmacy">Pharmacy</a></li>
+              <li><a href="services.html#ambulance">Ambulance Service</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="departments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Departments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="departments.html">All Departments</a></li>
+              <li><a href="departments.html#cardiology">Cardiology</a></li>
+              <li><a href="departments.html#neurology">Neurology</a></li>
+              <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+              <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+              <li><a href="departments.html#general">General Medicine</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="patients.html" class="nav-link dropdown-toggle active" aria-expanded="false">
+              <span>Patients</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              <span class="active-indicator"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="patients.html">Patient Directory</a></li>
+              <li><a href="treatment.html">Treatment Protocols (#EHR)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="appointments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Appointments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="appointments.html">Appointment List</a></li>
+              <li><a href="book-appointment.html">Book Appointment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="billing.html" class="nav-link">Billing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link">Reports</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="careers.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Careers</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="careers.html">Current Openings</a></li>
+              <li><a href="doctor-application.html">Doctor Application Form</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container page-banner-container">
+      <div>
+        <h1 class="page-banner-title">Treatment Details</h1>
+        <p class="page-banner-subtitle">Official Clinical Summary &amp; Medical Prescription Record</p>
+      </div>
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="patients.html">Patients</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Treatment</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Record Section (Matching Panel 10) -->
+  <main class="container">
+    <!-- Active Patient Selector Bar -->
+    <div class="patient-selector-banner">
+      <div class="patient-selector-label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Select Active Patient Medical Record:</span>
+      </div>
+      <select id="treatmentPatientSelect" class="patient-selector-select" aria-label="Select Patient Record">
+        <option value="PNT001" selected>Rahul Kumar (PNT001) - Cardiology</option>
+        <option value="PNT002">Priya Sharma (PNT002) - Neurology</option>
+        <option value="PNT003">Amit Singh (PNT003) - Orthopedics</option>
+        <option value="PNT004">Neha Patel (PNT004) - Pediatrics</option>
+        <option value="PNT005">Vikram Das (PNT005) - General Medicine</option>
+      </select>
+    </div>
+
+    <article class="treatment-card" id="printableTreatment">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; flex-wrap: wrap; gap: 14px;">
+        <div>
+          <span class="welcome-pill"><span id="treatmentEhrNumber">Electronic Health Record #EHR-99201</span></span>
+          <h2 id="treatmentProtocolTitle" style="font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); margin-top: 4px;">Outpatient Treatment Protocol</h2>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button type="button" class="btn btn-sm btn-outline" onclick="window.print()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span>Print Sheet</span>
+          </button>
+          <a href="book-appointment.html" id="treatmentFollowupBtn" class="btn btn-sm btn-primary">Schedule Followup</a>
+        </div>
+      </div>
+
+      <!-- Clinical Meta Grid -->
+      <div class="treatment-meta-grid">
+        <div class="treatment-meta-item">
+          <span class="treatment-label">Patient Name</span>
+          <span class="treatment-val" id="treatmentPatientName">Rahul Kumar</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted);" id="treatmentPatientMeta">ID: PNT001 | Age: 38 (M)</span>
+        </div>
+        <div class="treatment-meta-item">
+          <span class="treatment-label">Attending Doctor</span>
+          <span class="treatment-val" id="treatmentDocName">Dr. Rajesh Sharma</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted);" id="treatmentDocMeta">Chief Cardiologist</span>
+        </div>
+        <div class="treatment-meta-item">
+          <span class="treatment-label">Department</span>
+          <span class="treatment-val" id="treatmentDeptName">Cardiology</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted);" id="treatmentDeptMeta">OPD Block B, Room 204</span>
+        </div>
+        <div class="treatment-meta-item">
+          <span class="treatment-label">Encounter Date</span>
+          <span class="treatment-val" id="treatmentDate">20 May 2026</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted);" id="treatmentTimeMeta">10:00 AM IST</span>
+        </div>
+      </div>
+
+      <!-- Diagnosis -->
+      <div class="treatment-section-block">
+        <h3 class="treatment-subheading">Clinical Diagnosis</h3>
+        <div id="treatmentDiagnosis" style="background-color: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px 18px; font-weight: 700; color: #1e40af; font-size: 0.95rem;">
+          Hypertension &amp; Mild Sinus Arrhythmia (Grade 1 Essential)
+        </div>
+      </div>
+
+      <!-- Treatment Procedures -->
+      <div class="treatment-section-block">
+        <h3 class="treatment-subheading">Procedures &amp; Diagnostics Performed</h3>
+        <div id="treatmentProceduresContainer">
+          <ul class="treatment-list">
+            <li><strong>12-Lead Electrocardiogram (ECG):</strong> Normal sinus rhythm, minor non-specific ST wave variations.</li>
+            <li><strong>Serial Blood Pressure Monitoring:</strong> Average systolic 148 mmHg, diastolic 94 mmHg recorded in seated rest.</li>
+            <li><strong>Prescribed Medicines:</strong>
+              <ul style="margin-top: 6px; padding-left: 20px; list-style: circle;">
+                <li>Tab. Telmisartan 40mg - Once daily before breakfast (Morning)</li>
+                <li>Tab. Amlodipine 5mg - Once daily after dinner (Night)</li>
+                <li>Low sodium dietary guidance card issued.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Doctor Notes -->
+      <div class="treatment-section-block">
+        <h3 class="treatment-subheading">Doctor's Clinical Notes</h3>
+        <div class="clinical-notes-box" id="treatmentNotes">
+          Patient instructed to continue anti-hypertensive medication regimen strictly for 2 weeks. Maintain daily home BP logbook. Reduce dietary sodium intake (&lt;2g/day) and avoid strenuous cardiac exertion. Report to ER immediately in case of acute chest tightness, palpitation, or radiating dizziness. Scheduled for review follow-up on 04 June 2026.
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px; padding-top: 20px; border-top: 1px dashed var(--border-light); font-size: 0.8rem; color: var(--text-muted); flex-wrap: wrap; gap: 10px;">
+        <div>Authorized Medical Signature: <strong id="treatmentDoctorSign">Dr. Rajesh Sharma, MD, DM</strong></div>
+        <div>Hospital Registration Reg. No: <strong>HC-MED-99482/2026</strong></div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="logo-icon-box"><svg viewBox="0 0 36 36" fill="none" class="brand-svg"><rect width="36" height="36" rx="8" fill="#1d68bd"/><path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/></svg></div>
+            <div class="brand-text"><span class="brand-title" style="color: #ffffff;">HealthCare</span><span class="brand-subtitle" style="color: #94a3b8;">Hospital Portal</span></div>
+          </div>
+          <p class="footer-brand-desc">HealthCare Hospital is a multi-speciality tertiary care center committed to delivering world-class medical treatments with compassion, advanced technology, and patient-centered ethics.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home Portal</a></li>
+            <li><a href="about.html">About HealthCare</a></li>
+            <li><a href="services.html">Medical Services</a></li>
+            <li><a href="departments.html">Specialist Departments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="contact.html">Contact Helpdesk</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hospital Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="patients.html">Patient Directory</a></li>
+            <li><a href="appointments.html">Appointments Schedule</a></li>
+            <li><a href="book-appointment.html">Book Online Consultation</a></li>
+            <li><a href="billing.html">Invoices & Billing</a></li>
+            <li><a href="treatment.html">Treatment Protocols</a></li>
+            <li><a href="reports.html">Analytics & Reports</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency & Care</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px; color: #cbd5e1;">
+            <strong>Emergency Hotline:</strong><br><span style="color: #f87171; font-weight: 700; font-size: 1rem;">+91 98765 43210</span><br><span>Available 24 Hours / 7 Days</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HealthCare Hospital Portal. All rights reserved.</div>
+        <div style="display: flex; gap: 18px;"><a href="privacy.html" style="color: #94a3b8;">Privacy Policy</a><a href="terms.html" style="color: #94a3b8;">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="api-client.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

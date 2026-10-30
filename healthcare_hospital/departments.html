@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Departments - HealthCare Hospital Portal</title>
+  <meta name="description" content="Specialized medical departments at HealthCare Hospital: Cardiology, Neurology, Orthopedics, Pediatrics, Gynecology, General Medicine, Dentistry, and Ophthalmology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar" aria-label="Contact and emergency information">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <a href="tel:+911234567890" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 12345 67890</span>
+        </a>
+        <a href="mailto:info@healthcare.com" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@healthcare.com</span>
+        </a>
+        <div class="top-item address-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>123, Health Street, Medical City, India</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="emergency-wrapper">
+          <span class="emergency-label">Emergency:</span>
+          <a href="tel:+919876543210" class="emergency-number">+91 98765 43210</a>
+        </div>
+        <a href="login.html" class="login-reg-btn">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon-box">
+          <svg viewBox="0 0 36 36" fill="none" class="brand-svg">
+            <rect width="36" height="36" rx="8" fill="#1d68bd"/>
+            <path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/>
+            <path d="M12 18h3l2-4 3 8 2-4h3" stroke="#1d68bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">HealthCare</span>
+          <span class="brand-subtitle">Hospital Portal</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="services.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Services</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="services.html#emergency">Emergency Care</a></li>
+              <li><a href="services.html#opd">OPD Services</a></li>
+              <li><a href="services.html#diagnostics">Diagnostic Tests</a></li>
+              <li><a href="services.html#pharmacy">Pharmacy</a></li>
+              <li><a href="services.html#ambulance">Ambulance Service</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="departments.html" class="nav-link dropdown-toggle active" aria-expanded="false">
+              <span>Departments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              <span class="active-indicator"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="departments.html">All Departments</a></li>
+              <li><a href="departments.html#cardiology">Cardiology</a></li>
+              <li><a href="departments.html#neurology">Neurology</a></li>
+              <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+              <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+              <li><a href="departments.html#general">General Medicine</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="patients.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Patients</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="patients.html">Patient Directory</a></li>
+              <li><a href="treatment.html">Treatment Protocols (#EHR)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="appointments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Appointments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="appointments.html">Appointment List</a></li>
+              <li><a href="book-appointment.html">Book Appointment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="billing.html" class="nav-link">Billing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link">Reports</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="careers.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Careers</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="careers.html">Current Openings</a></li>
+              <li><a href="doctor-application.html">Doctor Application Form</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container page-banner-container">
+      <div>
+        <h1 class="page-banner-title">Our Departments</h1>
+        <p class="page-banner-subtitle">Centers of Clinical Excellence & Specialized Patient Care</p>
+      </div>
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Departments</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Departments Grid Section -->
+  <main class="container">
+    <div class="departments-grid">
+      <!-- 1. Cardiology -->
+      <div class="department-card">
+        <div class="dept-icon-box" style="background-color: #fee2e2; color: #ef4444;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h2 class="dept-title">Cardiology</h2>
+        <p class="dept-sub">Heart Care &amp; Cath Lab</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 16px 0;">Interventional cardiology, heart surgeries, pacemakers, and comprehensive cardiac rehabilitation.</p>
+        <a href="doctors.html" class="btn btn-sm btn-outline btn-block">Find Cardiologists</a>
+      </div>
+
+      <!-- 2. Neurology -->
+      <div class="department-card">
+        <div class="dept-icon-box" style="background-color: #eff6ff; color: #2563eb;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <h2 class="dept-title">Neurology</h2>
+        <p class="dept-sub">Brain &amp; Nerve Health</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 16px 0;">Advanced treatment for strokes, epilepsy, Parkinson's, neuro-trauma, and micro-neurosurgery.</p>
+        <a href="doctors.html" class="btn btn-sm btn-outline btn-block">Find Neurologists</a>
+      </div>
+
+      <!-- 3. Orthopedics -->
+      <div class="department-card">
+        <div class="dept-icon-box" style="background-color: #f0fdfa; color: #0d9488;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h2 class="dept-title">Orthopedics</h2>
+        <p class="dept-sub">Bone &amp; Joint Surgery</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 16px 0;">Joint replacements (knee/hip), arthroscopy, spine care, sports medicine, and fracture recovery.</p>
+        <a href="doctors.html" class="btn btn-sm btn-outline btn-block">Find Orthopedics</a>
+      </div>
+
+      <!-- 4. Pediatrics -->
+      <div class="department-card">
+        <div class="dept-icon-box" style="background-color: #fffbeb; color: #d97706;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h2 class="dept-title">Pediatrics</h2>
+        <p class="dept-sub">Child Care &amp; NICU</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 16px 0;">Newborn critical care, pediatric vaccinations, growth development, and adolescent medicine.</p>
+        <a href="doctors.html" class="btn btn-sm btn-outline btn-block">Find Pediatricians</a>
+      </div>
+
+      <!-- 5. Gynecology -->
+      <div class="department-card">
+        <div class="dept-icon-box" style="background-color: #fdf2f8; color: #db2777;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="9" r="5"/><line x1="12" y1="14" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+        </div>
+        <h2 class="dept-title">Gynecology</h2>
+        <p class="dept-sub">Women Care &amp; Maternity</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 16px 0;">Safe birthing suites, high-risk pregnancy care, fertility consultation, and laparoscopic surgeries.</p>
+        <a href="doctors.html" class="btn btn-sm btn-outline btn-block">Find Gynecologists</a>
+      </div>
+
+      <!-- 6. General Medicine -->
+      <div class="department-card">
+        <div class="dept-icon-box" style="background-color: #ecfdf5; color: #16a34a;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h2 class="dept-title">General Medicine</h2>
+        <p class="dept-sub">General Health &amp; Wellness</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 16px 0;">Treatment of chronic diseases, hypertension, diabetes management, infections, and preventative care.</p>
+        <a href="doctors.html" class="btn btn-sm btn-outline btn-block">Find Physicians</a>
+      </div>
+
+      <!-- 7. Dentistry -->
+      <div class="department-card">
+        <div class="dept-icon-box" style="background-color: #f0f9ff; color: #0284c7;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C7 2 6 6 6 9c0 3 1.5 6.5 2 11 .3 2.5 1.5 2 2.5 2s1.5-2 1.5-4c0-2 0-2 0-2s0 0 0 2c0 2 .5 4 1.5 4s2.2.5 2.5-2c.5-4.5 2-8 2-11 0-3-1-7-6-7z"/></svg>
+        </div>
+        <h2 class="dept-title">Dentistry</h2>
+        <p class="dept-sub">Dental Care &amp; Implants</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 16px 0;">Root canals, orthodontic braces, dental cosmetic enhancements, painless extractions, and implants.</p>
+        <a href="doctors.html" class="btn btn-sm btn-outline btn-block">Find Dentists</a>
+      </div>
+
+      <!-- 8. Ophthalmology -->
+      <div class="department-card">
+        <div class="dept-icon-box" style="background-color: #faf5ff; color: #9333ea;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h2 class="dept-title">Ophthalmology</h2>
+        <p class="dept-sub">Eye Care &amp; Lasik</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 12px 0 16px 0;">Advanced cataract laser surgery, glaucoma treatment, retinal diagnostics, and corrective specs.</p>
+        <a href="doctors.html" class="btn btn-sm btn-outline btn-block">Find Ophthalmologists</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="logo-icon-box"><svg viewBox="0 0 36 36" fill="none" class="brand-svg"><rect width="36" height="36" rx="8" fill="#1d68bd"/><path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/></svg></div>
+            <div class="brand-text"><span class="brand-title" style="color: #ffffff;">HealthCare</span><span class="brand-subtitle" style="color: #94a3b8;">Hospital Portal</span></div>
+          </div>
+          <p class="footer-brand-desc">HealthCare Hospital is a multi-speciality tertiary care center committed to delivering world-class medical treatments with compassion, advanced technology, and patient-centered ethics.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home Portal</a></li>
+            <li><a href="about.html">About HealthCare</a></li>
+            <li><a href="services.html">Medical Services</a></li>
+            <li><a href="departments.html">Specialist Departments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="contact.html">Contact Helpdesk</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hospital Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="patients.html">Patient Directory</a></li>
+            <li><a href="appointments.html">Appointments Schedule</a></li>
+            <li><a href="book-appointment.html">Book Online Consultation</a></li>
+            <li><a href="billing.html">Invoices & Billing</a></li>
+            <li><a href="treatment.html">Treatment Protocols</a></li>
+            <li><a href="reports.html">Analytics & Reports</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency & Care</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px; color: #cbd5e1;">
+            <strong>Emergency Hotline:</strong><br><span style="color: #f87171; font-weight: 700; font-size: 1rem;">+91 98765 43210</span><br><span>Available 24 Hours / 7 Days</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HealthCare Hospital Portal. All rights reserved.</div>
+        <div style="display: flex; gap: 18px;"><a href="privacy.html" style="color: #94a3b8;">Privacy Policy</a><a href="terms.html" style="color: #94a3b8;">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="api-client.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

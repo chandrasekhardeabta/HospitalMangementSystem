@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports &amp; Analytics - HealthCare Hospital Portal</title>
+  <meta name="description" content="Hospital operational statistics, patient flow analytics, department distributions, and monthly revenue performance reports.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar" aria-label="Contact and emergency information">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <a href="tel:+911234567890" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 12345 67890</span>
+        </a>
+        <a href="mailto:info@healthcare.com" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@healthcare.com</span>
+        </a>
+        <div class="top-item address-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>123, Health Street, Medical City, India</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="emergency-wrapper">
+          <span class="emergency-label">Emergency:</span>
+          <a href="tel:+919876543210" class="emergency-number">+91 98765 43210</a>
+        </div>
+        <a href="login.html" class="login-reg-btn">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon-box">
+          <svg viewBox="0 0 36 36" fill="none" class="brand-svg">
+            <rect width="36" height="36" rx="8" fill="#1d68bd"/>
+            <path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/>
+            <path d="M12 18h3l2-4 3 8 2-4h3" stroke="#1d68bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">HealthCare</span>
+          <span class="brand-subtitle">Hospital Portal</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="services.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Services</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="services.html#emergency">Emergency Care</a></li>
+              <li><a href="services.html#opd">OPD Services</a></li>
+              <li><a href="services.html#diagnostics">Diagnostic Tests</a></li>
+              <li><a href="services.html#pharmacy">Pharmacy</a></li>
+              <li><a href="services.html#ambulance">Ambulance Service</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="departments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Departments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="departments.html">All Departments</a></li>
+              <li><a href="departments.html#cardiology">Cardiology</a></li>
+              <li><a href="departments.html#neurology">Neurology</a></li>
+              <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+              <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+              <li><a href="departments.html#general">General Medicine</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="patients.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Patients</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="patients.html">Patient Directory</a></li>
+              <li><a href="treatment.html">Treatment Protocols (#EHR)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="appointments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Appointments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="appointments.html">Appointment List</a></li>
+              <li><a href="book-appointment.html">Book Appointment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="billing.html" class="nav-link">Billing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link active">Reports<span class="active-indicator"></span></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="careers.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Careers</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="careers.html">Current Openings</a></li>
+              <li><a href="doctor-application.html">Doctor Application Form</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container page-banner-container">
+      <div>
+        <h1 class="page-banner-title">Reports &amp; Analytics</h1>
+        <p class="page-banner-subtitle">Real-Time Clinical Metrics, Patient Intake &amp; Hospital Revenue</p>
+      </div>
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="admin.html">Dashboard</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Reports</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Section (Matching Panel 11) -->
+  <main class="container">
+    <div class="analytics-metrics-grid">
+      <!-- 1. Total Patients -->
+      <div class="metric-card">
+        <div class="metric-icon-box" style="background-color: #ecfdf5; color: #10b981;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <div class="metric-number">15,246</div>
+          <div class="metric-label">Total Patients</div>
+        </div>
+      </div>
+
+      <!-- 2. Appointments -->
+      <div class="metric-card">
+        <div class="metric-icon-box" style="background-color: #eff6ff; color: #2563eb;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+        </div>
+        <div>
+          <div class="metric-number">5,221</div>
+          <div class="metric-label">Appointments</div>
+        </div>
+      </div>
+
+      <!-- 3. Total Revenue -->
+      <div class="metric-card">
+        <div class="metric-icon-box" style="background-color: #f0fdf4; color: #16a34a;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <div class="metric-number">₹45,70,200</div>
+          <div class="metric-label">Total Revenue</div>
+        </div>
+      </div>
+
+      <!-- 4. Doctors -->
+      <div class="metric-card">
+        <div class="metric-icon-box" style="background-color: #faf5ff; color: #9333ea;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M16 11h6"/><path d="M19 8v6"/></svg>
+        </div>
+        <div>
+          <div class="metric-number">52</div>
+          <div class="metric-label">Active Doctors</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Grid (Matching Panel 11) -->
+    <div class="charts-grid">
+      <!-- Monthly Appointments Chart -->
+      <div class="chart-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h2 class="chart-card-title" style="margin-bottom: 0;">Monthly Appointments</h2>
+          <span style="font-size: 0.75rem; background-color: #f1f5f9; padding: 4px 10px; border-radius: 6px; font-weight: 600;">Year 2026</span>
+        </div>
+
+        <!-- Crisp Scalable Vector Graphic Line Graph -->
+        <div class="chart-container">
+          <svg viewBox="0 0 500 220" style="width: 100%; height: 100%; overflow: visible;">
+            <!-- Grid lines -->
+            <line x1="40" y1="30" x2="480" y2="30" stroke="#f1f5f9" stroke-width="1"/>
+            <line x1="40" y1="80" x2="480" y2="80" stroke="#f1f5f9" stroke-width="1"/>
+            <line x1="40" y1="130" x2="480" y2="130" stroke="#f1f5f9" stroke-width="1"/>
+            <line x1="40" y1="180" x2="480" y2="180" stroke="#e2e8f0" stroke-width="1.5"/>
+
+            <!-- Y Axis Labels -->
+            <text x="15" y="34" font-size="10" fill="#94a3b8" text-anchor="start">800</text>
+            <text x="15" y="84" font-size="10" fill="#94a3b8" text-anchor="start">600</text>
+            <text x="15" y="134" font-size="10" fill="#94a3b8" text-anchor="start">400</text>
+            <text x="15" y="184" font-size="10" fill="#94a3b8" text-anchor="start">200</text>
+
+            <!-- Line Path -->
+            <defs>
+              <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1d68bd" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#1d68bd" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <!-- Area fill -->
+            <path d="M 60 145 L 120 120 L 180 150 L 240 100 L 300 130 L 360 85 L 420 70 L 460 55 L 460 180 L 60 180 Z" fill="url(#areaGradient)"/>
+
+            <!-- Data Line -->
+            <polyline fill="none" stroke="#1d68bd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+              points="60,145 120,120 180,150 240,100 300,130 360,85 420,70 460,55"/>
+
+            <!-- Data Points Circles -->
+            <circle cx="60" cy="145" r="4" fill="#ffffff" stroke="#1d68bd" stroke-width="2"/>
+            <circle cx="120" cy="120" r="4" fill="#ffffff" stroke="#1d68bd" stroke-width="2"/>
+            <circle cx="180" cy="150" r="4" fill="#ffffff" stroke="#1d68bd" stroke-width="2"/>
+            <circle cx="240" cy="100" r="4" fill="#ffffff" stroke="#1d68bd" stroke-width="2"/>
+            <circle cx="300" cy="130" r="4" fill="#ffffff" stroke="#1d68bd" stroke-width="2"/>
+            <circle cx="360" cy="85" r="4" fill="#ffffff" stroke="#1d68bd" stroke-width="2"/>
+            <circle cx="420" cy="70" r="4" fill="#ffffff" stroke="#1d68bd" stroke-width="2"/>
+            <circle cx="460" cy="55" r="5" fill="#1d68bd" stroke="#ffffff" stroke-width="2"/>
+
+            <!-- X Axis Month Labels -->
+            <text x="60" y="202" font-size="10" fill="#64748b" text-anchor="middle">Jan</text>
+            <text x="120" y="202" font-size="10" fill="#64748b" text-anchor="middle">Feb</text>
+            <text x="180" y="202" font-size="10" fill="#64748b" text-anchor="middle">Mar</text>
+            <text x="240" y="202" font-size="10" fill="#64748b" text-anchor="middle">Apr</text>
+            <text x="300" y="202" font-size="10" fill="#64748b" text-anchor="middle">May</text>
+            <text x="360" y="202" font-size="10" fill="#64748b" text-anchor="middle">Jun</text>
+            <text x="420" y="202" font-size="10" fill="#64748b" text-anchor="middle">Jul</text>
+            <text x="460" y="202" font-size="10" fill="#64748b" text-anchor="middle">Aug</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Department Wise Patients Donut Chart -->
+      <div class="chart-card">
+        <h2 class="chart-card-title">Department Wise Patients</h2>
+        
+        <div style="display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap;">
+          <div style="position: relative; width: 180px; height: 180px;">
+            <svg viewBox="0 0 42 42" style="width: 100%; height: 100%; transform: rotate(-90deg);">
+              <!-- Donut segments using stroke-dasharray (circumference ~ 100) -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="#f1f5f9" stroke-width="6"></circle>
+              <!-- Cardiology (30%) Blue -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="#1d68bd" stroke-width="6" stroke-dasharray="30 70" stroke-dashoffset="0"></circle>
+              <!-- Neurology (25%) Teal -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="#0ea5e9" stroke-width="6" stroke-dasharray="25 75" stroke-dashoffset="-30"></circle>
+              <!-- Orthopedics (20%) Green -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="#10b981" stroke-width="6" stroke-dasharray="20 80" stroke-dashoffset="-55"></circle>
+              <!-- Pediatrics (15%) Purple -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="#a855f7" stroke-width="6" stroke-dasharray="15 85" stroke-dashoffset="-75"></circle>
+              <!-- Others (10%) Amber -->
+              <circle cx="21" cy="21" r="15.915" fill="none" stroke="#f59e0b" stroke-width="6" stroke-dasharray="10 90" stroke-dashoffset="-90"></circle>
+            </svg>
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+              <div style="font-size: 1.25rem; font-weight: 800; color: var(--navy-dark); line-height: 1;">100%</div>
+              <div style="font-size: 0.68rem; color: var(--text-muted); font-weight: 600;">Distribution</div>
+            </div>
+          </div>
+
+          <div class="donut-legend" style="flex: 1; min-width: 160px;">
+            <div class="legend-item">
+              <div><span class="legend-color-dot" style="background-color: #1d68bd;"></span>Cardiology</div>
+              <strong>30%</strong>
+            </div>
+            <div class="legend-item">
+              <div><span class="legend-color-dot" style="background-color: #0ea5e9;"></span>Neurology</div>
+              <strong>25%</strong>
+            </div>
+            <div class="legend-item">
+              <div><span class="legend-color-dot" style="background-color: #10b981;"></span>Orthopedics</div>
+              <strong>20%</strong>
+            </div>
+            <div class="legend-item">
+              <div><span class="legend-color-dot" style="background-color: #a855f7;"></span>Pediatrics</div>
+              <strong>15%</strong>
+            </div>
+            <div class="legend-item">
+              <div><span class="legend-color-dot" style="background-color: #f59e0b;"></span>Others</div>
+              <strong>10%</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="logo-icon-box"><svg viewBox="0 0 36 36" fill="none" class="brand-svg"><rect width="36" height="36" rx="8" fill="#1d68bd"/><path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/></svg></div>
+            <div class="brand-text"><span class="brand-title" style="color: #ffffff;">HealthCare</span><span class="brand-subtitle" style="color: #94a3b8;">Hospital Portal</span></div>
+          </div>
+          <p class="footer-brand-desc">HealthCare Hospital is a multi-speciality tertiary care center committed to delivering world-class medical treatments with compassion, advanced technology, and patient-centered ethics.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home Portal</a></li>
+            <li><a href="about.html">About HealthCare</a></li>
+            <li><a href="services.html">Medical Services</a></li>
+            <li><a href="departments.html">Specialist Departments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="contact.html">Contact Helpdesk</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hospital Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="patients.html">Patient Directory</a></li>
+            <li><a href="appointments.html">Appointments Schedule</a></li>
+            <li><a href="book-appointment.html">Book Online Consultation</a></li>
+            <li><a href="billing.html">Invoices & Billing</a></li>
+            <li><a href="treatment.html">Treatment Protocols</a></li>
+            <li><a href="reports.html">Analytics & Reports</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency & Care</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px; color: #cbd5e1;">
+            <strong>Emergency Hotline:</strong><br><span style="color: #f87171; font-weight: 700; font-size: 1rem;">+91 98765 43210</span><br><span>Available 24 Hours / 7 Days</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HealthCare Hospital Portal. All rights reserved.</div>
+        <div style="display: flex; gap: 18px;"><a href="privacy.html" style="color: #94a3b8;">Privacy Policy</a><a href="terms.html" style="color: #94a3b8;">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="api-client.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

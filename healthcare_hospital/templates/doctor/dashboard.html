@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Doctor Dashboard | HealthCare Hospital{% endblock %}
+{% block content %}
+<section class="dashboard-wrap"><div class="container py-4">
+    <div class="dashboard-header"><div><span class="eyebrow">Doctor Portal</span><h1>Welcome, {{ doctor.full_name }}</h1><p>{{ doctor.specialization }} · {{ doctor.department|default:"Hospital" }}</p></div><a href="{% url 'logout' %}" class="btn btn-outline-secondary">Logout</a></div>
+    <div class="row g-3 mb-4"><div class="col-md-4"><div class="dash-stat"><i class="bi bi-calendar2-check"></i><strong>{{ today_count }}</strong><span>Today's Appointments</span></div></div><div class="col-md-4"><div class="dash-stat"><i class="bi bi-people"></i><strong>{{ patient_count }}</strong><span>Total Patients</span></div></div><div class="col-md-4"><div class="dash-stat"><i class="bi bi-hourglass-split"></i><strong>{{ pending_count }}</strong><span>Pending Appointments</span></div></div></div>
+    <div class="content-card"><h4>Appointment Management</h4>{% for appointment in appointments %}<div class="appointment-row"><div class="appointment-date"><strong>{{ appointment.date|date:"d" }}</strong><small>{{ appointment.date|date:"M" }}</small></div><div class="flex-grow-1"><strong>{{ appointment.patient.user.get_full_name }}</strong><p>{{ appointment.department|default:"—" }} · {{ appointment.time|time:"h:i A" }}</p><small>{{ appointment.appointment_id }} · {{ appointment.appointment_type }}</small></div><span class="status-pill">{{ appointment.status }}</span></div>{% empty %}<div class="empty-state">No appointments found.</div>{% endfor %}</div>
+</div></section>
+{% endblock %}

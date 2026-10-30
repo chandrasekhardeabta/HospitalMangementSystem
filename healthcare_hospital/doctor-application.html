@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Application Form - HealthCare Hospital Portal</title>
+  <meta name="description" content="Apply as a consultant physician, specialist surgeon, or clinical researcher at HealthCare Hospital.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar" aria-label="Contact and emergency information">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <a href="tel:+911234567890" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 12345 67890</span>
+        </a>
+        <a href="mailto:info@healthcare.com" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@healthcare.com</span>
+        </a>
+        <div class="top-item address-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>123, Health Street, Medical City, India</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="emergency-wrapper">
+          <span class="emergency-label">Emergency:</span>
+          <a href="tel:+919876543210" class="emergency-number">+91 98765 43210</a>
+        </div>
+        <a href="login.html" class="login-reg-btn">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon-box">
+          <svg viewBox="0 0 36 36" fill="none" class="brand-svg">
+            <rect width="36" height="36" rx="8" fill="#1d68bd"/>
+            <path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/>
+            <path d="M12 18h3l2-4 3 8 2-4h3" stroke="#1d68bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">HealthCare</span>
+          <span class="brand-subtitle">Hospital Portal</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="services.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Services</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="services.html#emergency">Emergency Care</a></li>
+              <li><a href="services.html#opd">OPD Services</a></li>
+              <li><a href="services.html#diagnostics">Diagnostic Tests</a></li>
+              <li><a href="services.html#pharmacy">Pharmacy</a></li>
+              <li><a href="services.html#ambulance">Ambulance Service</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="departments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Departments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="departments.html">All Departments</a></li>
+              <li><a href="departments.html#cardiology">Cardiology</a></li>
+              <li><a href="departments.html#neurology">Neurology</a></li>
+              <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+              <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+              <li><a href="departments.html#general">General Medicine</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="patients.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Patients</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="patients.html">Patient Directory</a></li>
+              <li><a href="treatment.html">Treatment Protocols (#EHR)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="appointments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Appointments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="appointments.html">Appointment List</a></li>
+              <li><a href="book-appointment.html">Book Appointment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="billing.html" class="nav-link">Billing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link">Reports</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="careers.html" class="nav-link dropdown-toggle active" aria-expanded="false">
+              <span>Careers</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              <span class="active-indicator"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="careers.html">Current Openings</a></li>
+              <li><a href="doctor-application.html">Doctor Application Form</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container page-banner-container">
+      <div>
+        <h1 class="page-banner-title">Doctor Application Form</h1>
+        <p class="page-banner-subtitle">Join Our Prestigious Medical Faculty &amp; Clinical Staff</p>
+      </div>
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="careers.html">Careers</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Doctor Application</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form Section (Matching Panel 14) -->
+  <main class="container" style="padding-top: 40px; padding-bottom: 70px;">
+    <div style="max-width: 800px; margin: 0 auto; background-color: #ffffff; border: 1px solid var(--border-light); border-radius: 14px; padding: 36px; box-shadow: var(--shadow-sm);">
+      <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--navy-dark); margin-bottom: 8px;">Medical Staff Application</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 28px;">Our Clinical Recruitment Committee reviews credentials within 3 business days.</p>
+
+      <form id="standaloneDoctorAppForm" style="display: flex; flex-direction: column; gap: 20px;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="docFullName">Full Name *</label>
+            <input type="text" id="docFullName" placeholder="e.g. Dr. Siddharth Roy" required>
+          </div>
+          <div class="form-group">
+            <label for="docEmail">Email Address *</label>
+            <input type="email" id="docEmail" placeholder="doctor@hospital.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="docPhone">Phone Number *</label>
+            <input type="tel" id="docPhone" placeholder="+91 98765 00000" required>
+          </div>
+          <div class="form-group">
+            <label for="docExpYears">Experience (Years) *</label>
+            <input type="number" id="docExpYears" min="0" max="50" placeholder="e.g. 8" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="docSpecialtySelect">Specialization *</label>
+            <select id="docSpecialtySelect" required>
+              <option value="">Select Specialization</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Orthopedics">Orthopedics</option>
+              <option value="Pediatrics">Pediatrics</option>
+              <option value="General Medicine">General Medicine</option>
+              <option value="Anesthesiology">Anesthesiology &amp; ICU</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="docQualification">Qualification *</label>
+            <input type="text" id="docQualification" placeholder="e.g. MBBS, MD, DM, FRCS" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="docResumeFile">Upload CV / Credentials (PDF / DOC) *</label>
+          <input type="file" id="docResumeFile" accept=".pdf,.doc,.docx" required>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <button type="submit" class="btn btn-primary btn-block" style="padding: 13px; font-size: 0.95rem;">
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="logo-icon-box"><svg viewBox="0 0 36 36" fill="none" class="brand-svg"><rect width="36" height="36" rx="8" fill="#1d68bd"/><path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/></svg></div>
+            <div class="brand-text"><span class="brand-title" style="color: #ffffff;">HealthCare</span><span class="brand-subtitle" style="color: #94a3b8;">Hospital Portal</span></div>
+          </div>
+          <p class="footer-brand-desc">HealthCare Hospital is a multi-speciality tertiary care center committed to delivering world-class medical treatments with compassion, advanced technology, and patient-centered ethics.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home Portal</a></li>
+            <li><a href="about.html">About HealthCare</a></li>
+            <li><a href="services.html">Medical Services</a></li>
+            <li><a href="departments.html">Specialist Departments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="contact.html">Contact Helpdesk</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hospital Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="patients.html">Patient Directory</a></li>
+            <li><a href="appointments.html">Appointments Schedule</a></li>
+            <li><a href="book-appointment.html">Book Online Consultation</a></li>
+            <li><a href="billing.html">Invoices & Billing</a></li>
+            <li><a href="treatment.html">Treatment Protocols</a></li>
+            <li><a href="reports.html">Analytics & Reports</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency & Care</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px; color: #cbd5e1;">
+            <strong>Emergency Hotline:</strong><br><span style="color: #f87171; font-weight: 700; font-size: 1rem;">+91 98765 43210</span><br><span>Available 24 Hours / 7 Days</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HealthCare Hospital Portal. All rights reserved.</div>
+        <div style="display: flex; gap: 18px;"><a href="privacy.html" style="color: #94a3b8;">Privacy Policy</a><a href="terms.html" style="color: #94a3b8;">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="api-client.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

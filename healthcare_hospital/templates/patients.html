@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient List - HealthCare Hospital Portal</title>
+  <meta name="description" content="Registered patients directory, admission records, medical histories, and digital patient profiles at HealthCare Hospital.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <aside class="top-bar" aria-label="Contact and emergency information">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <a href="tel:+911234567890" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 12345 67890</span>
+        </a>
+        <a href="mailto:info@healthcare.com" class="top-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@healthcare.com</span>
+        </a>
+        <div class="top-item address-item">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>123, Health Street, Medical City, India</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="emergency-wrapper">
+          <span class="emergency-label">Emergency:</span>
+          <a href="tel:+919876543210" class="emergency-number">+91 98765 43210</a>
+        </div>
+        <a href="login.html" class="login-reg-btn">
+          <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Login / Register</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon-box">
+          <svg viewBox="0 0 36 36" fill="none" class="brand-svg">
+            <rect width="36" height="36" rx="8" fill="#1d68bd"/>
+            <path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/>
+            <path d="M12 18h3l2-4 3 8 2-4h3" stroke="#1d68bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">HealthCare</span>
+          <span class="brand-subtitle">Hospital Portal</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="services.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Services</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="services.html">All Services</a></li>
+              <li><a href="services.html#emergency">Emergency Care</a></li>
+              <li><a href="services.html#opd">OPD Services</a></li>
+              <li><a href="services.html#diagnostics">Diagnostic Tests</a></li>
+              <li><a href="services.html#pharmacy">Pharmacy</a></li>
+              <li><a href="services.html#ambulance">Ambulance Service</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="departments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Departments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="departments.html">All Departments</a></li>
+              <li><a href="departments.html#cardiology">Cardiology</a></li>
+              <li><a href="departments.html#neurology">Neurology</a></li>
+              <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+              <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+              <li><a href="departments.html#general">General Medicine</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="doctors.html" class="nav-link">Doctors</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="patients.html" class="nav-link dropdown-toggle active" aria-expanded="false">
+              <span>Patients</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              <span class="active-indicator"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="patients.html">Patient Directory</a></li>
+              <li><a href="treatment.html">Treatment Protocols (#EHR)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="appointments.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Appointments</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="appointments.html">Appointment List</a></li>
+              <li><a href="book-appointment.html">Book Appointment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="billing.html" class="nav-link">Billing</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link">Reports</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="careers.html" class="nav-link dropdown-toggle" aria-expanded="false">
+              <span>Careers</span>
+              <svg class="caret-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="careers.html">Current Openings</a></li>
+              <li><a href="doctor-application.html">Doctor Application Form</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container page-banner-container">
+      <div>
+        <h1 class="page-banner-title">Patient List</h1>
+        <p class="page-banner-subtitle">Comprehensive Electronic Health Records &amp; Directory</p>
+      </div>
+      <div class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Patients</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient List Table Section -->
+  <main class="container" style="padding-bottom: 60px;">
+    <div class="table-card">
+      <div class="table-header-bar">
+        <h2 class="table-title">Registered Patients</h2>
+        
+        <div class="table-controls">
+          <div class="search-input-box">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="patientSearchInput" placeholder="Search patient name, ID...">
+          </div>
+
+          <button type="button" class="btn btn-primary" id="openAddPatientModal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span>+ Add Patient</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table" id="patientsTable">
+          <thead>
+            <tr>
+              <th>Patient ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Phone</th>
+              <th style="text-align: center;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>PNT001</strong></td>
+              <td>
+                <div style="font-weight: 700; color: var(--navy-dark);">Rahul Kumar</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Cardiology OPD</div>
+              </td>
+              <td>38</td>
+              <td>Male</td>
+              <td>9876543210</td>
+              <td>
+                <div class="action-btn-group" style="justify-content: center;">
+                  <a href="treatment.html" class="action-icon-btn" title="View Treatment Details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </a>
+                  <button type="button" class="action-icon-btn edit-patient-btn" title="Edit Patient Info">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                  </button>
+                  <button type="button" class="action-icon-btn delete-btn" title="Delete Patient Record">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>PNT002</strong></td>
+              <td>
+                <div style="font-weight: 700; color: var(--navy-dark);">Priya Sharma</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Neurology Clinic</div>
+              </td>
+              <td>28</td>
+              <td>Female</td>
+              <td>9876543211</td>
+              <td>
+                <div class="action-btn-group" style="justify-content: center;">
+                  <a href="treatment.html" class="action-icon-btn" title="View Treatment Details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </a>
+                  <button type="button" class="action-icon-btn edit-patient-btn" title="Edit Patient Info">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                  </button>
+                  <button type="button" class="action-icon-btn delete-btn" title="Delete Patient Record">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>PNT003</strong></td>
+              <td>
+                <div style="font-weight: 700; color: var(--navy-dark);">Amit Singh</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Orthopedics Ward</div>
+              </td>
+              <td>45</td>
+              <td>Male</td>
+              <td>9876543212</td>
+              <td>
+                <div class="action-btn-group" style="justify-content: center;">
+                  <a href="treatment.html" class="action-icon-btn" title="View Treatment Details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </a>
+                  <button type="button" class="action-icon-btn edit-patient-btn" title="Edit Patient Info">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                  </button>
+                  <button type="button" class="action-icon-btn delete-btn" title="Delete Patient Record">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>PNT004</strong></td>
+              <td>
+                <div style="font-weight: 700; color: var(--navy-dark);">Neha Patel</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Pediatric Consultation</div>
+              </td>
+              <td>32</td>
+              <td>Female</td>
+              <td>9876543213</td>
+              <td>
+                <div class="action-btn-group" style="justify-content: center;">
+                  <a href="treatment.html" class="action-icon-btn" title="View Treatment Details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </a>
+                  <button type="button" class="action-icon-btn edit-patient-btn" title="Edit Patient Info">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                  </button>
+                  <button type="button" class="action-icon-btn delete-btn" title="Delete Patient Record">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>PNT005</strong></td>
+              <td>
+                <div style="font-weight: 700; color: var(--navy-dark);">Vikram Das</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">General Medicine</div>
+              </td>
+              <td>50</td>
+              <td>Male</td>
+              <td>9876543214</td>
+              <td>
+                <div class="action-btn-group" style="justify-content: center;">
+                  <a href="treatment.html" class="action-icon-btn" title="View Treatment Details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </a>
+                  <button type="button" class="action-icon-btn edit-patient-btn" title="Edit Patient Info">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                  </button>
+                  <button type="button" class="action-icon-btn delete-btn" title="Delete Patient Record">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination-wrapper">
+        <div>Showing 1 to 5 of 15,246 entries</div>
+        <div class="pagination-controls">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">&gt;</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Add Patient Modal -->
+  <div class="modal-backdrop" id="addPatientModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Register New Patient</h3>
+        <button type="button" class="modal-close">&times;</button>
+      </div>
+      <form id="addPatientForm" class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="newPatientName">Full Name *</label>
+            <input type="text" id="newPatientName" placeholder="e.g. Ananya Roy" required>
+          </div>
+          <div class="form-group">
+            <label for="newPatientAge">Age *</label>
+            <input type="number" id="newPatientAge" min="0" max="120" placeholder="e.g. 29" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="newPatientGender">Gender *</label>
+            <select id="newPatientGender" required>
+              <option value="">Select Gender</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="newPatientPhone">Phone Number *</label>
+            <input type="tel" id="newPatientPhone" placeholder="+91 98765 00000" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="newPatientDept">Admitting Department *</label>
+          <select id="newPatientDept" required>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Orthopedics">Orthopedics</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="General Medicine">General Medicine</option>
+          </select>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Patient Record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Patient Profile Modal -->
+  <div class="modal-backdrop" id="patientProfileModal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Patient Medical Profile</h3>
+        <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="patient-profile-meta">
+          <div class="profile-meta-block">
+            <span class="label">Patient ID</span>
+            <span class="value" id="profileModalId">PNT001</span>
+          </div>
+          <div class="profile-meta-block">
+            <span class="label">Blood Group</span>
+            <span class="value" id="profileModalBlood">O+</span>
+          </div>
+          <div class="profile-meta-block">
+            <span class="label">Admission Status</span>
+            <span class="value"><span class="badge badge-success">Active OPD</span></span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Full Name &amp; Demographics</div>
+          <div style="font-size: 1.15rem; font-weight: 800; color: var(--navy-dark);" id="profileModalName">Rahul Kumar</div>
+          <div style="font-size: 0.825rem; color: var(--text-muted);" id="profileModalDemographics">38 Years | Male | +91 9876543210</div>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Clinical Diagnosis &amp; Department</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary);" id="profileModalCondition">Hypertension &amp; Mild Sinus Arrhythmia</div>
+          <div style="font-size: 0.825rem; color: var(--text-dark);" id="profileModalDeptDoctor">Cardiology Department • Attending: Dr. Rajesh Sharma</div>
+        </div>
+
+        <div style="background-color: #f8fafc; border-radius: 8px; padding: 12px; margin-bottom: 20px;">
+          <div style="font-size: 0.75rem; font-weight: 700; color: var(--slate-dark); margin-bottom: 4px;">Known Allergies &amp; Vitals:</div>
+          <div style="font-size: 0.825rem; color: var(--text-main);" id="profileModalNotes">BP: 130/85 mmHg | Pulse: 74 bpm | SpO2: 99%. No known penicillin allergies.</div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary modal-cancel">Close</button>
+          <a href="treatment.html?patient=PNT001" id="profileModalTreatmentLink" class="btn btn-outline">View Full Treatment</a>
+          <a href="book-appointment.html" id="profileModalBookLink" class="btn btn-primary">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="logo-icon-box"><svg viewBox="0 0 36 36" fill="none" class="brand-svg"><rect width="36" height="36" rx="8" fill="#1d68bd"/><path d="M14 6h8v7h7v8h-7v9h-8v-9h-7v-8h7V6z" fill="#ffffff"/></svg></div>
+            <div class="brand-text"><span class="brand-title" style="color: #ffffff;">HealthCare</span><span class="brand-subtitle" style="color: #94a3b8;">Hospital Portal</span></div>
+          </div>
+          <p class="footer-brand-desc">HealthCare Hospital is a multi-speciality tertiary care center committed to delivering world-class medical treatments with compassion, advanced technology, and patient-centered ethics.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home Portal</a></li>
+            <li><a href="about.html">About HealthCare</a></li>
+            <li><a href="services.html">Medical Services</a></li>
+            <li><a href="departments.html">Specialist Departments</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="contact.html">Contact Helpdesk</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hospital Portals</h4>
+          <ul class="footer-links-list">
+            <li><a href="patients.html">Patient Directory</a></li>
+            <li><a href="appointments.html">Appointments Schedule</a></li>
+            <li><a href="book-appointment.html">Book Online Consultation</a></li>
+            <li><a href="billing.html">Invoices & Billing</a></li>
+            <li><a href="treatment.html">Treatment Protocols</a></li>
+            <li><a href="reports.html">Analytics & Reports</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Emergency & Care</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 12px; color: #cbd5e1;">
+            <strong>Emergency Hotline:</strong><br><span style="color: #f87171; font-weight: 700; font-size: 1rem;">+91 98765 43210</span><br><span>Available 24 Hours / 7 Days</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 HealthCare Hospital Portal. All rights reserved.</div>
+        <div style="display: flex; gap: 18px;"><a href="privacy.html" style="color: #94a3b8;">Privacy Policy</a><a href="terms.html" style="color: #94a3b8;">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="api-client.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

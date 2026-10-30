@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block title %}Doctor Login | HealthCare Hospital{% endblock %}
+{% block content %}
+<section class="auth-page"><div class="container"><div class="auth-card compact"><div class="auth-heading"><span class="auth-icon"><i class="bi bi-person-badge-fill"></i></span><h1>Doctor Login</h1><p>Access your appointments, patients and clinical workspace.</p></div><form method="post">{% csrf_token %}<div class="mb-3"><label class="form-label">Email</label><input class="form-control" type="email" name="email" required></div><div class="mb-3"><label class="form-label">Password</label><input class="form-control" type="password" name="password" required></div><button class="btn btn-primary w-100 btn-lg">Login</button></form><p class="text-center mt-3 mb-0">Not registered? <a href="{% url 'doctor_apply' %}">Apply as a doctor</a></p></div></div></section>
+{% endblock %}
